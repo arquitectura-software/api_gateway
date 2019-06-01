@@ -1,0 +1,19 @@
+{
+  "name": "api_gateway",
+  "version": "1.0.0",
+  "description": "API Gateway - BreakTime App",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/arquitectura-software/api_gateway.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/arquitectura-software/api_gateway/issues"
+  },
+  "homepage": "https://github.com/arquitectura-software/api_gateway#readme"
+}
