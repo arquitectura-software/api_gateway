@@ -1,5 +1,5 @@
 import { generalRequest, getRequest } from '../utilities';
-import { url, port, entryPoint } from './Eserver';
+import { url, port, entryPoint } from './Dserver';
 
 const URL = `http://${url}:${port}/${entryPoint}`;
 
