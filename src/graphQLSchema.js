@@ -5,24 +5,24 @@ import { makeExecutableSchema } from 'graphql-tools';
 import { mergeSchemas } from './utilities';
 
 import {
-	coursesMutations,
-	coursesQueries,
-	coursesTypeDef
-} from './courses/typeDefs';
+	eventsMutations,
+	eventsQueries,
+	eventsTypeDef
+} from './events/EtypeDefs';
 
-import coursesResolvers from './courses/resolvers';
+import eventsResolvers from './events/Eresolvers';
 
 // merge the typeDefs
 const mergedTypeDefs = mergeSchemas(
 	[
 		'scalar JSON',
-		coursesTypeDef
+		eventsTypeDef
 	],
 	[
-		coursesQueries
+		eventsQueries
 	],
 	[
-		coursesMutations
+		eventsMutations
 	]
 );
 
@@ -31,6 +31,6 @@ export default makeExecutableSchema({
 	typeDefs: mergedTypeDefs,
 	resolvers: merge(
 		{ JSON: GraphQLJSON }, // allows scalar JSON
-		coursesResolvers
+		eventsResolvers
 	)
 });
