@@ -22,5 +22,12 @@ services:
       CREWS_URL: '3.82.217.243'
       CREWS_PORT: '3000'
       CREWS_ENTRY: 'crews'
+      # Promociones
+      PROMOCIONES_URL: '34.239.104.208'
+      PROMOCIONES_PORT: '3000'
+      PROMOCIONES_ENTRY: 'promociones'
+      TIENDAS_URL: '34.239.104.208'
+      TIENDAS_PORT: '3000'
+      TIENDAS_ENTRY: 'tiendas'
     ports:
       - '5000:5000'
