@@ -3,22 +3,22 @@ import { url, port, entryPoint } from './Dserver';
 
 const URL = `http://${url}:${port}/${entryPoint}`;
 
-const Eresolvers = {
+const Dresolvers = {
 	Query: {
-		getEvents: (_) =>
+		getDestinations: (_) =>
 			getRequest(URL, ''),
-		eventById: (_, { id }) =>
+		destinationById: (_, { id }) =>
 			generalRequest(`${URL}/${id}`, 'GET'),
 
 	},
 	Mutation: {
-		createEvent: (_, { event }) =>
-			generalRequest(`${URL}`, 'POST', event),
-		updateEvent: (_, { id, event }) =>
-			generalRequest(`${URL}/${id}`, 'PUT', event),
-		deleteEvent: (_, { id }) =>
+		createDestination: (_, { destination }) =>
+		generalRequest(`${URL}`, 'POST', destination),
+		updateDestination: (_, { id, destination }) =>
+			generalRequest(`${URL}/${id}`, 'PUT', destination),
+		deleteDestination: (_, { id }) =>
 			generalRequest(`${URL}/${id}`, 'DELETE')
 	}
 };
 
-export default Eresolvers;
+export default Dresolvers;

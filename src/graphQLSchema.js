@@ -10,19 +10,29 @@ import {
 	eventsTypeDef
 } from './events/EtypeDefs';
 
+import {
+	destinationsMutations,
+	destinationsQueries,
+	destinationsTypeDef
+} from './destinations/DtypeDefs';
+
 import eventsResolvers from './events/Eresolvers';
+import destinationsResolvers from './destinations/Dresolvers';
 
 // merge the typeDefs
 const mergedTypeDefs = mergeSchemas(
 	[
 		'scalar JSON',
-		eventsTypeDef
+		eventsTypeDef,
+		destinationsTypeDef
 	],
 	[
-		eventsQueries
+		eventsQueries,
+		destinationsQueries
 	],
 	[
-		eventsMutations
+		eventsMutations,
+		destinationsMutations
 	]
 );
 
@@ -31,6 +41,7 @@ export default makeExecutableSchema({
 	typeDefs: mergedTypeDefs,
 	resolvers: merge(
 		{ JSON: GraphQLJSON }, // allows scalar JSON
-		eventsResolvers
+		eventsResolvers,
+		destinationsResolvers
 	)
 });

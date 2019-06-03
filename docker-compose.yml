@@ -9,5 +9,8 @@ services:
       EVENTS_URL: '192.168.99.101'
       EVENTS_PORT: '3000'
       EVENTS_ENTRY: 'events'
+      DESTINATIONS_URL: '192.168.99.101'
+      DESTINATIONS_PORT: '3001'
+      DESTINATIONS_ENTRY: 'destinations'
     ports:
       - '5000:5000'

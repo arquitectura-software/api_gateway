@@ -1,31 +1,29 @@
-export const eventsTypeDef = `
-type Event {
+export const destinationsTypeDef = `
+type Destination {
     id: Int!
     name: String!
-    location: String!
-    date: String!
-    capacity: Int!
-    audence: String!
+    weather: String!
     description: String!
-    tipo: String!
+    timezone: String!
+    landingtime: DateTime!
+    boardingtime: DateTime!
 }
-input EventInput {
+input DestinationInput {
     name: String!
-    location: String!
-    date: String!
-    capacity: Int!
-    audence: String!
+    weather: String!
     description: String!
-    tipo: String!
+    timezone: String!
+    landingtime: DateTime!
+    boardingtime: DateTime!
     }`;
 
-export const eventsQueries = `
-    getEvents: [Event]!
-    eventById(id: Int!): Event!
+export const destinationsQueries = `
+    getDestinations: [Destination]!
+    destinationById(id: Int!): Destination!
 `;
 
-export const eventsMutations = `
-    createEvent(event: EventInput!): Event!
-    deleteEvent(id: Int!): Int
-    updateEvent(id: Int!, event: EventInput!): Event!
+export const destinationsMutations = `
+    createDestination(Destination: DestinationInput!): Destination!
+    deleteDestination(id: Int!): Int
+    updateDestination(id: Int!, Destination: DestinationInput!): Destination!
 `;
