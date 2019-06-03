@@ -17,7 +17,7 @@ input EventInput {
     audence: String!
     description: String!
     tipo: String!
-    }`;
+}`;
 
 export const eventsQueries = `
     getEvents: [Event]!

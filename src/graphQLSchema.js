@@ -10,29 +10,55 @@ import {
 	eventsTypeDef
 } from './events/EtypeDefs';
 
+
 import {
 	destinationsMutations,
 	destinationsQueries,
 	destinationsTypeDef
 } from './destinations/DtypeDefs';
 
+// Login
+import{ 
+	usersMutations,usersQueries,usersTypeDef
+} from './login/users/UtypeDefs';
+
+import{ 
+	crewsMutations,crewsQueries,crewsTypeDef
+} from './login/crew/CtypeDefs';
+
+import{ 
+	passengersMutations,passengersQueries,passengersTypeDef
+} from './login/passengers/PtypeDefs';
+
 import eventsResolvers from './events/Eresolvers';
 import destinationsResolvers from './destinations/Dresolvers';
+import usersResolvers from './login/users/Uresolvers';
+import crewsResolvers from './login/crew/Cresolvers';
+import passengersResolvers from './login/passengers/Presolvers';
 
 // merge the typeDefs
 const mergedTypeDefs = mergeSchemas(
 	[
 		'scalar JSON',
 		eventsTypeDef,
-		destinationsTypeDef
+		destinationsTypeDef,
+		usersTypeDef,
+		crewsTypeDef,
+		passengersTypeDef,
 	],
 	[
 		eventsQueries,
-		destinationsQueries
+		destinationsQueries,
+		usersQueries,
+		crewsQueries,
+		passengersQueries
 	],
 	[
 		eventsMutations,
-		destinationsMutations
+		destinationsMutations,
+		usersMutations,
+		crewsMutations,
+		passengersMutations
 	]
 );
 
@@ -42,6 +68,9 @@ export default makeExecutableSchema({
 	resolvers: merge(
 		{ JSON: GraphQLJSON }, // allows scalar JSON
 		eventsResolvers,
-		destinationsResolvers
+		destinationsResolvers,
+		usersResolvers,
+		crewsResolvers,
+		passengersResolvers
 	)
 });

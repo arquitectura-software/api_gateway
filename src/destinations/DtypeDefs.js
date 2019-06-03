@@ -5,16 +5,16 @@ type Destination {
     weather: String!
     description: String!
     timezone: String!
-    landingtime: DateTime!
-    boardingtime: DateTime!
+    landingtime: String!
+    boardingtime: String!
 }
 input DestinationInput {
     name: String!
     weather: String!
     description: String!
     timezone: String!
-    landingtime: DateTime!
-    boardingtime: DateTime!
+    landingtime: String!
+    boardingtime: String!
     }`;
 
 export const destinationsQueries = `
