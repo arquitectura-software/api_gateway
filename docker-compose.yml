@@ -38,5 +38,9 @@ services:
       TIENDAS_PORT: '3000'
       TIENDAS_ENTRY: 'tiendas'
 
+      # Notifications
+      NOTIFICATIONS_URL: '18.212.5.61'
+      NOTIFICATIONS_PORT: '3000'
+      NOTIFICATIONS_ENTRY: 'notifications'
     ports:
       - '5000:5000'
