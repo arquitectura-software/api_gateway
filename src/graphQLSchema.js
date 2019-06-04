@@ -4,7 +4,7 @@ import { makeExecutableSchema } from 'graphql-tools';
 
 import { mergeSchemas } from './utilities';
 
-// events
+// Events
 import {
 	eventsMutations,eventsQueries,eventsTypeDef
 } from './evn/events/EtypeDefs';
@@ -39,10 +39,18 @@ import{
 	promocionesMutations,promocionesQueries,promocionesTypeDef
 } from './promos/promocion/PMtypeDefs';
 
-//RESOLVERS
+//Notificaciones
+import{ 
+	notificationsMutations,notificationsQueries,notificationsTypeDef
+} from './notifications/NtypeDefs';
 
+// RESOLVERS
+
+// Events
 import eventsResolvers from './evn/events/Eresolvers';
 import reservationResolvers from './evn/reservations/Rresolvers';
+
+// Destinations
 import destinationsResolvers from './destinations/Dresolvers';
 
 // Login
@@ -53,6 +61,9 @@ import passengersResolvers from './login/passengers/Presolvers';
 // Promociones
 import promocionesResolvers from './promos/promocion/PMresolvers';
 import tiendasResolvers from './promos/tienda/Tresolvers';
+
+// Notifications
+import notificationsResolvers from './notifications/Nresolvers';
 
 // merge the typeDefs
 const mergedTypeDefs = mergeSchemas(
@@ -65,8 +76,8 @@ const mergedTypeDefs = mergeSchemas(
 		passengersTypeDef,
 		promocionesTypeDef,
 		tiendasTypeDef,
-		reservationsTypeDef
-
+		reservationsTypeDef,
+		notificationsTypeDef
 	],
 	[
 		eventsQueries,
@@ -76,7 +87,8 @@ const mergedTypeDefs = mergeSchemas(
 		passengersQueries,
 		promocionesQueries,
 		tiendasQueries,
-		reservationsQueries
+		reservationsQueries,
+		notificationsQueries
 	],
 	[
 		eventsMutations,
@@ -86,7 +98,8 @@ const mergedTypeDefs = mergeSchemas(
 		passengersMutations,
 		promocionesMutations,
 		tiendasMutations,
-		reservationsMutations
+		reservationsMutations,
+		notificationsMutations
 	]
 );
 
@@ -102,6 +115,7 @@ export default makeExecutableSchema({
 		passengersResolvers,
 		promocionesResolvers,
 		tiendasResolvers,
-		reservationResolvers
+		reservationResolvers,
+		notificationsResolvers
 	)
 });
