@@ -1,46 +1,48 @@
 version: '2.1'
 services:
   api-gateway:
+    container_name: api-gateway
     build: .
     environment:
       PORT: '5000'
       SHOW_URLS: 'true'
-      
-      # Eventos
-      EVENTS_URL: '52.201.215.111'
-      EVENTS_PORT: '3000'
-      EVENTS_ENTRY: 'events'
-      RESERVATIONS_URL: '52.201.215.111'
-      RESERVATIONS_PORT: '3000'
-      RESERVATIONS_ENTRY: 'reservations'
 
       # Destinos
-      DESTINATIONS_URL: '3.82.145.168'
-      DESTINATIONS_PORT: '3000'
+      DESTINATIONS_URL: '192.168.99.101'
+      DESTINATIONS_PORT: '3001'
       DESTINATIONS_ENTRY: 'destinations'
       
+      # Eventos
+      EVENTS_URL: '192.168.99.102'
+      EVENTS_PORT: '3003'
+      EVENTS_ENTRY: 'events'
+      RESERVATIONS_URL: '192.168.99.102'
+      RESERVATIONS_PORT: '3003'
+      RESERVATIONS_ENTRY: 'reservations'
+      
       # Login
-      USERS_URL: '3.82.217.243'
-      USERS_PORT: '3000'
+      USERS_URL: '192.168.99.103'
+      USERS_PORT: '3002'
       USERS_ENTRY: 'users'
-      PASSENGERS_URL: '3.82.217.243'
-      PASSENGERS_PORT: '3000'
+      PASSENGERS_URL: '192.168.99.103'
+      PASSENGERS_PORT: '3002'
       PASSENGERS_ENTRY: 'passengers'
-      CREWS_URL: '3.82.217.243'
-      CREWS_PORT: '3000'
+      CREWS_URL: '192.168.99.103'
+      CREWS_PORT: '3002'
       CREWS_ENTRY: 'crews'
+
+      # Notifications
+      NOTIFICATIONS_URL: '192.168.99.104'
+      NOTIFICATIONS_PORT: '3004'
+      NOTIFICATIONS_ENTRY: 'notifications'
       
       # Promociones
-      PROMOCIONES_URL: '34.239.104.208'
+      PROMOCIONES_URL: '192.168.99.105'
       PROMOCIONES_PORT: '3000'
       PROMOCIONES_ENTRY: 'promociones'
-      TIENDAS_URL: '34.239.104.208'
+      TIENDAS_URL: '192.168.99.105'
       TIENDAS_PORT: '3000'
       TIENDAS_ENTRY: 'tiendas'
 
-      # Notifications
-      NOTIFICATIONS_URL: '18.212.5.61'
-      NOTIFICATIONS_PORT: '3000'
-      NOTIFICATIONS_ENTRY: 'notifications'
     ports:
       - '5000:5000'

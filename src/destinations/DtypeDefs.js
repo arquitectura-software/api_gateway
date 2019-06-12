@@ -23,7 +23,7 @@ export const destinationsQueries = `
 `;
 
 export const destinationsMutations = `
-    createDestination(Destination: DestinationInput!): Destination!
+    createDestination(destination: DestinationInput!): Destination!
     deleteDestination(id: Int!): Int
-    updateDestination(id: Int!, Destination: DestinationInput!): Destination!
+    updateDestination(id: Int!, destination: DestinationInput!): Destination!
 `;

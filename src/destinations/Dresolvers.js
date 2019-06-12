@@ -13,7 +13,7 @@ const Dresolvers = {
 	},
 	Mutation: {
 		createDestination: (_, { destination }) =>
-		generalRequest(`${URL}`, 'POST', destination),
+			generalRequest(`${URL}`, 'POST', destination),
 		updateDestination: (_, { id, destination }) =>
 			generalRequest(`${URL}/${id}`, 'PUT', destination),
 		deleteDestination: (_, { id }) =>
