@@ -31,6 +31,14 @@ import{
 	passengersMutations,passengersQueries,passengersTypeDef
 } from './login/passengers/PtypeDefs';
 
+//Lddap
+import {
+	ldMutations,
+	ldQueries,
+	ldTypeDef
+} from './ldap/LDtypeDefs';
+
+
 //Promociones
 import{ 
 	tiendasMutations,tiendasQueries,tiendasTypeDef
@@ -65,6 +73,9 @@ import tiendasResolvers from './promos/tienda/Tresolvers';
 // Notifications
 import notificationsResolvers from './notifications/Nresolvers';
 
+// ldap
+import ldResolvers from './ldap/LDresolvers';
+
 // merge the typeDefs
 const mergedTypeDefs = mergeSchemas(
 	[
@@ -77,7 +88,8 @@ const mergedTypeDefs = mergeSchemas(
 		promocionesTypeDef,
 		tiendasTypeDef,
 		reservationsTypeDef,
-		notificationsTypeDef
+		notificationsTypeDef,
+		ldTypeDef
 	],
 	[
 		eventsQueries,
@@ -88,7 +100,8 @@ const mergedTypeDefs = mergeSchemas(
 		promocionesQueries,
 		tiendasQueries,
 		reservationsQueries,
-		notificationsQueries
+		notificationsQueries,
+		ldQueries
 	],
 	[
 		eventsMutations,
@@ -99,7 +112,8 @@ const mergedTypeDefs = mergeSchemas(
 		promocionesMutations,
 		tiendasMutations,
 		reservationsMutations,
-		notificationsMutations
+		notificationsMutations,
+		ldMutations
 	]
 );
 
@@ -116,6 +130,7 @@ export default makeExecutableSchema({
 		promocionesResolvers,
 		tiendasResolvers,
 		reservationResolvers,
-		notificationsResolvers
+		notificationsResolvers,
+		ldResolvers
 	)
 });

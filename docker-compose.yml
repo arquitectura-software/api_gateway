@@ -44,5 +44,17 @@ services:
       TIENDAS_PORT: '3000'
       TIENDAS_ENTRY: 'tiendas'
 
+<<<<<<< Updated upstream
+=======
+      # Notifications
+      NOTIFICATIONS_URL: '18.212.5.61'
+      NOTIFICATIONS_PORT: '3000'
+      NOTIFICATIONS_ENTRY: 'notifications'
+
+      # Servidor LDAP
+      LDAP_URL:
+      LDAP_PORT: '8580'
+      LDAP_ENTRY: 
+>>>>>>> Stashed changes
     ports:
       - '5000:5000'
