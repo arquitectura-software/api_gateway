@@ -52,9 +52,9 @@ services:
       NOTIFICATIONS_ENTRY: 'notifications'
 
       # Servidor LDAP
-      LDAP_URL:
-      LDAP_PORT: '8580'
-      LDAP_ENTRY: 
+      LDAP_URL:  '192.168.99.103'
+      LDAP_PORT: '3002'
+      LDAP_ENTRY:  'auth'
 >>>>>>> Stashed changes
     ports:
       - '5000:5000'
