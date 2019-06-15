@@ -8,53 +8,46 @@ services:
       SHOW_URLS: 'true'
 
       # Destinos
-      DESTINATIONS_URL: '192.168.99.101'
+      DESTINATIONS_URL: '54.237.247.170'
       DESTINATIONS_PORT: '3001'
       DESTINATIONS_ENTRY: 'destinations'
       
       # Eventos
-      EVENTS_URL: '192.168.99.102'
+      EVENTS_URL: '18.233.158.9'
       EVENTS_PORT: '3003'
       EVENTS_ENTRY: 'events'
-      RESERVATIONS_URL: '192.168.99.102'
+      RESERVATIONS_URL: '18.233.158.9'
       RESERVATIONS_PORT: '3003'
       RESERVATIONS_ENTRY: 'reservations'
       
       # Login
-      USERS_URL: '192.168.99.103'
+      USERS_URL: '54.224.94.195'
       USERS_PORT: '3002'
       USERS_ENTRY: 'users'
-      PASSENGERS_URL: '192.168.99.103'
+      PASSENGERS_URL: '54.224.94.195'
       PASSENGERS_PORT: '3002'
       PASSENGERS_ENTRY: 'passengers'
-      CREWS_URL: '192.168.99.103'
+      CREWS_URL: '54.224.94.195'
       CREWS_PORT: '3002'
       CREWS_ENTRY: 'crews'
 
       # Notifications
-      NOTIFICATIONS_URL: '192.168.99.104'
+      NOTIFICATIONS_URL: '34.227.117.230'
       NOTIFICATIONS_PORT: '3004'
       NOTIFICATIONS_ENTRY: 'notifications'
       
       # Promociones
-      PROMOCIONES_URL: '192.168.99.105'
+      PROMOCIONES_URL: '52.201.234.125'
       PROMOCIONES_PORT: '3000'
       PROMOCIONES_ENTRY: 'promociones'
-      TIENDAS_URL: '192.168.99.105'
+      TIENDAS_URL: '52.201.234.125'
       TIENDAS_PORT: '3000'
       TIENDAS_ENTRY: 'tiendas'
 
-<<<<<<< Updated upstream
-=======
-      # Notifications
-      NOTIFICATIONS_URL: '18.212.5.61'
-      NOTIFICATIONS_PORT: '3000'
-      NOTIFICATIONS_ENTRY: 'notifications'
-
       # Servidor LDAP
-      LDAP_URL:  '192.168.99.103'
-      LDAP_PORT: '3002'
+      LDAP_URL:  '3.93.247.219'
+      LDAP_PORT: '389'
       LDAP_ENTRY:  'auth'
->>>>>>> Stashed changes
+
     ports:
       - '5000:5000'
