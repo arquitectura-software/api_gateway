@@ -4,13 +4,13 @@ type Passenger {
     id_user: Int!
     birthdate: String!
     email: String!
-    phone: Int!
+    phone: String!
 }
 input PassengerInput {
     id_user: Int!
     birthdate: String!
     email: String!
-    phone: Int!
+    phone: String!
 }`;
 
 export const passengersQueries = `
