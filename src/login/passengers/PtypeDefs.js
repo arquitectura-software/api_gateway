@@ -15,11 +15,11 @@ input PassengerInput {
 
 export const passengersQueries = `
     getPassengers: [Passenger]!
-    PassengerById(id: Int!): Passenger!
+    passengerById(id: Int!): Passenger!
 `;
 
 export const passengersMutations = `
     createPassenger(passenger: PassengerInput!): Passenger!
-    deletePassenger(id: Int!): Int
-    updatePassenger(id: Int!, Passenger: PassengerInput!): Passenger!
+    deletePassenger(id: Int!): Int!
+    updatePassenger(id: Int!, passenger: PassengerInput!): Passenger!
 `;

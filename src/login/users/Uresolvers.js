@@ -7,7 +7,7 @@ const Uresolvers = {
 	Query: {
 		getUsers: (_) =>
 			getRequest(URL, ''),
-		UserById: (_, { id }) =>
+		userById: (_, { id }) =>
 			generalRequest(`${URL}/${id}`, 'GET'),
 
 	},

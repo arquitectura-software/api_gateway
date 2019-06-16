@@ -11,11 +11,11 @@ input UserInput {
 
 export const usersQueries = `
     getUsers: [User]!
-    UserById(id: Int!): User!
+    userById(id: Int!): User!
 `;
 
 export const usersMutations = `
     createUser(user: UserInput!): User!
-    deleteUser(id: Int!): Int
+    deleteUser(id: Int!): Int!
     updateUser(id: Int!, User: UserInput!): User!
 `;

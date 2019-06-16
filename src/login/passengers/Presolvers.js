@@ -7,7 +7,7 @@ const Presolvers = {
 	Query: {
 		getPassengers: (_) =>
 			getRequest(URL, ''),
-		PassengerById: (_, { id }) =>
+		passengerById: (_, { id }) =>
 			generalRequest(`${URL}/${id}`, 'GET'),
 
 	},
