@@ -24,6 +24,6 @@ export const destinationsQueries = `
 
 export const destinationsMutations = `
     createDestination(destination: DestinationInput!): Destination!
-    deleteDestination(id: Int!): Int
+    deleteDestination(id: Int!): String!
     updateDestination(id: Int!, destination: DestinationInput!): Destination!
 `;
