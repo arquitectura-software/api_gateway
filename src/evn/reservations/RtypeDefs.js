@@ -12,8 +12,8 @@ input ReservationInput {
 }`;
 
 export const reservationsQueries = `
-    getReservations: [Event]!
-    reservationById(id: Int!): Event!
+    getReservations: [Reservation]!
+    reservationById(id: Int!): Reservation!
 `;
 
 export const reservationsMutations = `
