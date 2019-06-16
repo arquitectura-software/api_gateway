@@ -8,44 +8,44 @@ services:
       SHOW_URLS: 'true'
 
       # Destinos
-      DESTINATIONS_URL: '18.206.95.243'
-      DESTINATIONS_PORT: '3001'
+      DESTINATIONS_URL: '3.218.89.31'
+      DESTINATIONS_PORT: '3000'
       DESTINATIONS_ENTRY: 'destinations'
       
       # Eventos
-      EVENTS_URL: '3.92.132.58'
-      EVENTS_PORT: '3003'
+      EVENTS_URL: '3.216.195.42'
+      EVENTS_PORT: '3000'
       EVENTS_ENTRY: 'events'
-      RESERVATIONS_URL: '3.92.132.58'
-      RESERVATIONS_PORT: '3003'
+      RESERVATIONS_URL: '3.216.195.42'
+      RESERVATIONS_PORT: '3000'
       RESERVATIONS_ENTRY: 'reservations'
       
       # Login
-      USERS_URL: '3.86.15.76'
-      USERS_PORT: '3002'
+      USERS_URL: '3.219.172.198'
+      USERS_PORT: '3000'
       USERS_ENTRY: 'users'
-      PASSENGERS_URL: '3.86.15.76'
-      PASSENGERS_PORT: '3002'
+      PASSENGERS_URL: '3.219.172.198'
+      PASSENGERS_PORT: '3000'
       PASSENGERS_ENTRY: 'passengers'
-      CREWS_URL: '3.86.15.76'
-      CREWS_PORT: '3002'
+      CREWS_URL: '3.219.172.198'
+      CREWS_PORT: '3000'
       CREWS_ENTRY: 'crews'
 
       # Notifications
-      NOTIFICATIONS_URL: '18.206.118.246'
-      NOTIFICATIONS_PORT: '3004'
+      NOTIFICATIONS_URL: '52.206.156.102'
+      NOTIFICATIONS_PORT: '3000'
       NOTIFICATIONS_ENTRY: 'notifications'
       
       # Promociones
-      PROMOCIONES_URL: '54.86.50.175'
+      PROMOCIONES_URL: '34.224.247.140'
       PROMOCIONES_PORT: '3000'
       PROMOCIONES_ENTRY: 'promociones'
-      TIENDAS_URL: '54.86.50.175'
+      TIENDAS_URL: '34.224.247.140'
       TIENDAS_PORT: '3000'
       TIENDAS_ENTRY: 'tiendas'
 
       # Servidor LDAP
-      LDAP_URL:  '3.93.58.82'
+      LDAP_URL:  '3.219.172.198'
       LDAP_PORT: '389'
       LDAP_ENTRY:  'auth'
 

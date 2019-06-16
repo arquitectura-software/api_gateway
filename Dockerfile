@@ -11,4 +11,6 @@ RUN npm install
 COPY . /git/api_gateway
 RUN npm run prepublish
 
+EXPOSE 5000
+
 CMD [ "npm", "run", "runServer" ]

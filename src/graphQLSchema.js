@@ -6,12 +6,17 @@ import { mergeSchemas } from './utilities';
 
 // Events
 import {
-	eventsMutations,eventsQueries,eventsTypeDef
+	eventsMutations,
+	eventsQueries,
+	eventsTypeDef
 } from './evn/events/EtypeDefs';
 import {
-	reservationsMutations,reservationsQueries,reservationsTypeDef
+	reservationsMutations,
+	reservationsQueries,
+	reservationsTypeDef
 } from './evn/reservations/RtypeDefs';
 
+// Destinations
 import {
 	destinationsMutations,
 	destinationsQueries,
@@ -20,15 +25,19 @@ import {
 
 // Login
 import{ 
-	usersMutations,usersQueries,usersTypeDef
+	usersMutations,
+	usersQueries,
+	usersTypeDef
 } from './login/users/UtypeDefs';
-
 import{ 
-	crewsMutations,crewsQueries,crewsTypeDef
+	crewsMutations,
+	crewsQueries,
+	crewsTypeDef
 } from './login/crew/CtypeDefs';
-
 import{ 
-	passengersMutations,passengersQueries,passengersTypeDef
+	passengersMutations,
+	passengersQueries,
+	passengersTypeDef
 } from './login/passengers/PtypeDefs';
 
 //Lddap
@@ -41,15 +50,21 @@ import {
 
 //Promociones
 import{ 
-	tiendasMutations,tiendasQueries,tiendasTypeDef
+	tiendasMutations,
+	tiendasQueries,
+	tiendasTypeDef
 } from './promos/tienda/TtypeDefs';
 import{ 
-	promocionesMutations,promocionesQueries,promocionesTypeDef
+	promocionesMutations,
+	promocionesQueries,
+	promocionesTypeDef
 } from './promos/promocion/PMtypeDefs';
 
 //Notificaciones
 import{ 
-	notificationsMutations,notificationsQueries,notificationsTypeDef
+	notificationsMutations,
+	notificationsQueries,
+	notificationsTypeDef
 } from './notifications/NtypeDefs';
 
 // RESOLVERS
