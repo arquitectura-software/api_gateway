@@ -12,12 +12,22 @@ const LDresolvers = {
 			let res = await	generalRequest(`${URL}`, 'POST', credentials)
 			const a = JSON.stringify(res)
 			const response = a.split(",")[0].split(":")[1]
+			var token = "";
+			
+			if (response == "true"){
+				token = a.split(",")[2].split(":")[1]	
+				console.log(token)
+			}
 			
 			if(res){
 				if(response === "false"){
 					return 'Usuario no autenticado.'
 				}else{
-					return 'Usuario autenticado.'
+					return {
+						message: 'Usuario autenticado.',
+						token: token
+					}
+					//'Usuario autenticado.'
 				}				
 			}else{
 				return 'Usuario no autenticado.'
