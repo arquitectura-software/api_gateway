@@ -13,20 +13,21 @@ const LDresolvers = {
 			const a = JSON.stringify(res)
 			const response = a.split(",")[0].split(":")[1]
 			var token = "";
-			
+			var ans = "";
 			if (response == "true"){
 				token = a.split(",")[2].split(":")[1]	
 				console.log(token)
+				ans = JSON.stringify({
+					message: 'Usuario autenticado.',
+					token: token
+				})
 			}
 			
 			if(res){
 				if(response === "false"){
 					return 'Usuario no autenticado.'
 				}else{
-					return {
-						message: 'Usuario autenticado.',
-						token: token
-					}
+					return ans
 					//'Usuario autenticado.'
 				}				
 			}else{
