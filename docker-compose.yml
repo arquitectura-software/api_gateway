@@ -21,13 +21,13 @@ services:
       RESERVATIONS_ENTRY: 'reservations'
       
       # Login
-      USERS_URL: '3.219.172.198'
+      USERS_URL: '192.168.99.103'
       USERS_PORT: '3000'
       USERS_ENTRY: 'users'
-      PASSENGERS_URL: '3.219.172.198'
+      PASSENGERS_URL: '192.168.99.103'
       PASSENGERS_PORT: '3000'
       PASSENGERS_ENTRY: 'passengers'
-      CREWS_URL: '3.219.172.198'
+      CREWS_URL: '192.168.99.103'
       CREWS_PORT: '3000'
       CREWS_ENTRY: 'crews'
 
@@ -45,7 +45,7 @@ services:
       TIENDAS_ENTRY: 'tiendas'
 
       # Servidor LDAP
-      LDAP_URL:  '3.219.172.198'
+      LDAP_URL:  '192.168.99.103'
       LDAP_PORT: '3000'
       LDAP_ENTRY:  'auth'
 

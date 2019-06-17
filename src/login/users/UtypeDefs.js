@@ -3,10 +3,14 @@ type User {
     id: Int!
     names: String!
     surnames: String!
+    username: String!
+    passw: String!
 }
 input UserInput {
     names: String!
     surnames: String!
+    username: String!
+    passw: String!
 }`;
 
 export const usersQueries = `
