@@ -5,6 +5,7 @@ type Destination {
     weather: String!
     description: String!
     timezone: String!
+    cityimage: String!
     landingtime: String!
     boardingtime: String!
 }
@@ -13,6 +14,7 @@ input DestinationInput {
     weather: String!
     description: String!
     timezone: String!
+    cityimage: String!
     landingtime: String!
     boardingtime: String!
     }`;

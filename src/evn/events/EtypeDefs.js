@@ -26,6 +26,6 @@ export const eventsQueries = `
 
 export const eventsMutations = `
     createEvent(event: EventInput!): Event!
-    deleteEvent(id: Int!): Int
+    deleteEvent(id: Int!): Int!
     updateEvent(id: Int!, event: EventInput!): Event!
 `;

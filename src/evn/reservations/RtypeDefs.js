@@ -18,6 +18,6 @@ export const reservationsQueries = `
 
 export const reservationsMutations = `
     createReservation(reservation: ReservationInput!): Reservation!
-    deleteReservation(id: Int!): Int
+    deleteReservation(id: Int!): Int!
     updateReservation(id: Int!, reservation: ReservationInput!): Reservation!
 `;
