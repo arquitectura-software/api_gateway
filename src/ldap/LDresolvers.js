@@ -1,40 +1,59 @@
 import { generalRequest, getRequest } from '../utilities';
-import { url, port, entryPoint } from './LDserver';
+import { url, port, entryPointA, entryPointAa,entryPointAd,entryPointAda } from './LDserver';
+
+const URLA = `http://${url}:${port}/${entryPointA}`;
+const URLAa = `http://${url}:${port}/${entryPointAa}`;
+const URLAd = `http://${url}:${port}/${entryPointAd}`;
+const URLAda = `http://${url}:${port}/${entryPointAda}`;
 
 
-const URL = `http://${url}:${port}/${entryPoint}`;
+//const URL = `http://${url}:${port}/${entryPoint}`;
 
 const LDresolvers = {
 	Query: {
 	},
 	Mutation: {
-		login: async (_, { credentials }) => {
-			let res = await	generalRequest(`${URL}`, 'POST', credentials)
+		loginUser: async (_, { credentials }) => {
+			let res = await	generalRequest(`${URLA}`, 'POST', credentials)
 			const a = JSON.stringify(res)
+			//console.log(a);
 			const response = a.split(",")[0].split(":")[1]
 			var token = "";
 			var ans = "";
 			if (response == "true"){
-				token = a.split(",")[2].split(":")[1]	
-				console.log(token)
-				ans = JSON.stringify({
-					message: 'Usuario autenticado.',
-					token: token
-				})
+				token = a.split(",")[2].split(":")[1]		
+				//console.log(token)
+				ans = { message: 'Usuario autenticado.',token}
 			}
 			
 			if(res){
-				if(response === "false"){
-					return 'Usuario no autenticado.'
-				}else{
-					return ans
-					//'Usuario autenticado.'
-				}				
-			}else{
-				return 'Usuario no autenticado.'
+				if(response === "false")return 'Usuario no autenticado.'
+				else return ans
+			}else return 'Usuario no autenticado.'
+		},
+		loginAdmin: async (_, { credentials }) => {
+			let res = await	generalRequest(`${URLAa}`, 'POST', credentials)
+			const a = JSON.stringify(res)
+			//console.log(a);
+			const response = a.split(",")[0].split(":")[1]
+			var token = "";
+			var ans = "";
+			if (response == "true"){
+				token = a.split(",")[2].split(":")[1]		
+				//console.log(token)
+				ans = { message: 'Admin autenticado.',token}
 			}
 			
-		}
+			if(res){
+				if(response === "false")return 'Admin no autenticado.'
+				else return ans
+			}else return 'Admin no autenticado.'
+		},
+		createUser: (_, { user }) =>
+			generalRequest(`${URLAd}`, 'POST', user),
+		createAdmin: (_, { user }) =>
+			generalRequest(`${URLAda}`, 'POST', user),
+
 	}
 };
 

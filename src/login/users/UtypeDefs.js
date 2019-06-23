@@ -1,15 +1,15 @@
 export const usersTypeDef = `
 type User {
     id: Int!
-    names: String!
-    surnames: String!
-    username: String!
+    uname: String!
+    surname: String!
+    email: String!
     passw: String!
 }
 input UserInput {
-    names: String!
-    surnames: String!
-    username: String!
+    uname: String!
+    surname: String!
+    email: String!
     passw: String!
 }`;
 

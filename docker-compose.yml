@@ -47,7 +47,10 @@ services:
       # Servidor LDAP
       LDAP_URL:  '3.219.172.198'
       LDAP_PORT: '3000'
-      LDAP_ENTRY:  'auth'
+      LDAP_ENTRYA:  'auth'
+      LDAP_ENTRYAa: 'authAdmin'
+      LDAP_ENTRYAd: 'add'
+      LDAP_ENTRYAda: 'addAdmin'
 
     ports:
       - '5000:5000'
