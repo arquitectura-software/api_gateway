@@ -8,7 +8,7 @@ const Tresolvers = {
 		getTiendas: (_) =>
 			getRequest(URL, ''),
 		tiendaById: (_, { id }) =>
-			generalRequest(`${URL}/${id}`, 'GET'),
+			getRequest(URL, id),
 
 	},
 	Mutation: {

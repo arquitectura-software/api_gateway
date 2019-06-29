@@ -1,6 +1,5 @@
 export const notificationsTypeDef = `
 type Notification {
-    id: Int!
     id_persona: Int!
     tipo: String!
     medio: String!
