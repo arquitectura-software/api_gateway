@@ -44,7 +44,8 @@ import{
 import {
 	ldMutations,
 	ldQueries,
-	ldTypeDef
+	ldTypeDef,
+	//ldTypeDef2
 } from './ldap/LDtypeDefs';
 
 
@@ -104,7 +105,8 @@ const mergedTypeDefs = mergeSchemas(
 		tiendasTypeDef,
 		reservationsTypeDef,
 		notificationsTypeDef,
-		ldTypeDef
+		ldTypeDef,
+		//ldTypeDef2
 	],
 	[
 		eventsQueries,
