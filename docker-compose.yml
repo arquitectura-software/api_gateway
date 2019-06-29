@@ -37,10 +37,10 @@ services:
       NOTIFICATIONS_ENTRY: 'notifications'
       
       # Promociones
-      PROMOCIONES_URL: '34.224.247.140'
+      PROMOCIONES_URL: '192.168.99.101'
       PROMOCIONES_PORT: '3000'
       PROMOCIONES_ENTRY: 'promociones'
-      TIENDAS_URL: '34.224.247.140'
+      TIENDAS_URL: '192.168.99.101'
       TIENDAS_PORT: '3000'
       TIENDAS_ENTRY: 'tiendas'
 
