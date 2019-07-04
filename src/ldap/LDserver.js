@@ -8,3 +8,5 @@ export const entryPointAa = process.env.LDAP_ENTRYAa
 export const entryPointAd = process.env.LDAP_ENTRYAd
 // agregar administradores
 export const entryPointAda = process.env.LDAP_ENTRYAda
+// verificar Token
+export const entryPointv = process.env.LDAP_ENTRYV

@@ -9,6 +9,9 @@ input UserInput2 {
     email: String!
     passw: String!
 }
+input Token{
+    token: String
+}
 input LoginInput {
     email: String!
     password: String!
@@ -23,4 +26,5 @@ export const ldMutations = `
     loginAdmin(credentials: LoginInput!): String!
     createUser(user: UserInput2!): response!
     createAdmin(user: UserInput2!): response!
+    validate(credentials: Token):String!
 `;
