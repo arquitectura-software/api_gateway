@@ -55,7 +55,7 @@ const LDresolvers = {
 		createAdmin: (_, { user }) =>
 			generalRequest(`${URLAda}`, 'POST', user),
 		
-		verify: async (_, { credentials }) => {
+		validate: async (_, { credentials }) => {
 			let res = await	generalRequest(`${URLV}`, 'POST', credentials)
 			return res
 		}	

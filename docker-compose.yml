@@ -51,7 +51,7 @@ services:
       LDAP_ENTRYAa: 'authAdmin'
       LDAP_ENTRYAd: 'add'
       LDAP_ENTRYAda: 'addAdmin'
-      LDAP_ENTRYV: 'verify'
+      LDAP_ENTRYV: 'validate'
 
     ports:
       - '5000:5000'
