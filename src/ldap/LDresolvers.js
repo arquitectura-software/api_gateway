@@ -56,7 +56,7 @@ const LDresolvers = {
 			generalRequest(`${URLAda}`, 'POST', user),
 		
 		verify: async (_, { credentials }) => {
-			let res = await	generalRequest(`${URLAa}`, 'POST', credentials)
+			let res = await	generalRequest(`${URLV}`, 'POST', credentials)
 			return res
 		}	
 	}
