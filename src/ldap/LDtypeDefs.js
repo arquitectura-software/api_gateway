@@ -24,7 +24,7 @@ export const ldQueries = `
 export const ldMutations = `
     loginUser(credentials: LoginInput!): String!
     loginAdmin(credentials: LoginInput!): String!
-    createUser(user: UserInput2!): response!
+    createUserld(user: UserInput2!): response!
     createAdmin(user: UserInput2!): response!
-    validate(credentials: Token):String!
+    validate(credentials: Token): String!
 `;

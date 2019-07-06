@@ -50,7 +50,7 @@ const LDresolvers = {
 				else return ans
 			}else return 'Admin no autenticado.'
 		},
-		createUser: (_, { user }) =>
+		createUserld: (_, { user }) =>
 			generalRequest(`${URLAd}`, 'POST', user),
 		createAdmin: (_, { user }) =>
 			generalRequest(`${URLAda}`, 'POST', user),
