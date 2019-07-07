@@ -26,11 +26,11 @@ const LDresolvers = {
 				//console.log(token)
 				ans = { message: 'Usuario autenticado.',token: token}
 			}
-			
+			var othans = {message: 'Usuario  no autenticado.',token: ""}
 			if(res){
-				if(response === "false")return 'Usuario no autenticado.'
+				if(response === "false")return othans
 				else return ans
-			}else return 'Usuario no autenticado.'
+			}else return othans
 		},
 		loginAdmin: async (_, { credentials }) => {
 			let res = await	generalRequest(`${URLAa}`, 'POST', credentials)
@@ -39,16 +39,18 @@ const LDresolvers = {
 			const response = a.split(",")[0].split(":")[1]
 			var token = "";
 			var ans = "";
+
 			if (response == "true"){
 				token = a.split(",")[2].split(":")[1]		
 				//console.log(token)
 				ans = { message: 'Admin autenticado.',token: token}
 			}
 			
+			var othans = {message: 'Usuario  no autenticado.',token: ""}
 			if(res){
-				if(response === "false")return 'Admin no autenticado.'
+				if(response === "false")return othans
 				else return ans
-			}else return 'Admin no autenticado.'
+			}else return othans
 		},
 		createUserld: (_, { user }) =>
 			generalRequest(`${URLAd}`, 'POST', user),
