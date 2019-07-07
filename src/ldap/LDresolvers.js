@@ -24,7 +24,7 @@ const LDresolvers = {
 			if (response == "true"){
 				token = a.split(",")[2].split(":")[1]		
 				//console.log(token)
-				ans = { message: 'Usuario autenticado.',token}
+				ans = { message: 'Usuario autenticado.',token: token}
 			}
 			
 			if(res){
@@ -42,7 +42,7 @@ const LDresolvers = {
 			if (response == "true"){
 				token = a.split(",")[2].split(":")[1]		
 				//console.log(token)
-				ans = { message: 'Admin autenticado.',token}
+				ans = { message: 'Admin autenticado.',token: token}
 			}
 			
 			if(res){

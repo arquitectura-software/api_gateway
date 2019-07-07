@@ -3,6 +3,10 @@ type response {
     success: String!
     data: String!
 }
+type correct{
+    message: String!
+    token: String!
+}
 input UserInput2 {
     uname: String!
     surname: String!
@@ -22,8 +26,8 @@ export const ldQueries = `
 `;
 
 export const ldMutations = `
-    loginUser(credentials: LoginInput!): String!
-    loginAdmin(credentials: LoginInput!): String!
+    loginUser(credentials: LoginInput!): correct!
+    loginAdmin(credentials: LoginInput!): correct!
     createUserld(user: UserInput2!): response!
     createAdmin(user: UserInput2!): response!
     validate(credentials: Token): String!
