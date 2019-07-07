@@ -9,7 +9,8 @@ const Uresolvers = {
 			getRequest(URL, ''),
 		userById: (_, { id }) =>
 			generalRequest(`${URL}/${id}`, 'GET'),
-
+		userByUsername: (_, { username }) =>
+			generalRequest(`${URL}/${username}`, 'GET'),
 	},
 	Mutation: {
 		createUser: (_, { user }) =>

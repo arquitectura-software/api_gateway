@@ -16,6 +16,7 @@ input UserInput {
 export const usersQueries = `
     getUsers: [User]!
     userById(id: Int!): User!
+    userByUsername(username: String!): User!
 `;
 
 export const usersMutations = `
