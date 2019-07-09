@@ -8,16 +8,16 @@ services:
       SHOW_URLS: 'true'
 
       # Destinos
-      DESTINATIONS_URL: '3.218.89.31'
+      DESTINATIONS_URL: '35.173.204.155'
       DESTINATIONS_PORT: '3000'
       DESTINATIONS_ENTRY: 'destinations'
       
       # Eventos
-      EVENTS_URL: '3.216.195.42'
-      EVENTS_PORT: '3000'
+      EVENTS_URL: '35.173.204.155'
+      EVENTS_PORT: '3003'
       EVENTS_ENTRY: 'events'
-      RESERVATIONS_URL: '3.216.195.42'
-      RESERVATIONS_PORT: '3000'
+      RESERVATIONS_URL: '35.173.204.155'
+      RESERVATIONS_PORT: '3003'
       RESERVATIONS_ENTRY: 'reservations'
       
       # Login
@@ -32,16 +32,16 @@ services:
       CREWS_ENTRY: 'crews'
 
       # Notifications
-      NOTIFICATIONS_URL: '52.206.156.102'
-      NOTIFICATIONS_PORT: '3000'
+      NOTIFICATIONS_URL: '35.173.204.155'
+      NOTIFICATIONS_PORT: '3002'
       NOTIFICATIONS_ENTRY: 'notifications'
       
       # Promociones
-      PROMOCIONES_URL: '34.224.247.140'
-      PROMOCIONES_PORT: '3000'
+      PROMOCIONES_URL: '35.173.204.155'
+      PROMOCIONES_PORT: '3004'
       PROMOCIONES_ENTRY: 'promociones'
-      TIENDAS_URL: '34.224.247.140'
-      TIENDAS_PORT: '3000'
+      TIENDAS_URL: '35.173.204.155'
+      TIENDAS_PORT: '3004'
       TIENDAS_ENTRY: 'tiendas'
 
       # Servidor LDAP
