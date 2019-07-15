@@ -20,7 +20,7 @@ const LDresolvers = {
 		},
 		loginAdmin: async (_, { credentials }) => {
 			let res = await	generalRequest(`${URLAa}`, 'POST', credentials)
-			return ans
+			return res
 		},
 		createUserld: (_, { user }) =>
 			generalRequest(`${URLAd}`, 'POST', user),
