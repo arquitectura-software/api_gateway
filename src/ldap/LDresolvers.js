@@ -15,42 +15,12 @@ const LDresolvers = {
 	},
 	Mutation: {
 		loginUser: async (_, { credentials }) => {
-			let res = await	generalRequest(`${URLA}`, 'POST', credentials)
-			const a = JSON.stringify(res)
-			//console.log(a);
-			const response = a.split(",")[0].split(":")[1]
-			var token = "";
-			var ans = "";
-			if (response == "true"){
-				token = a.split(",")[2].split(":")[1]		
-				//console.log(token)
-				ans = { message: 'Usuario autenticado.',token: token}
-			}
-			var othans = {message: 'Usuario  no autenticado.',token: ""}
-			if(res){
-				if(response === "false")return othans
-				else return ans
-			}else return othans
+			let res = await	generalRequest(`${URLA}`, 'POST', credentials);
+			return res
 		},
 		loginAdmin: async (_, { credentials }) => {
 			let res = await	generalRequest(`${URLAa}`, 'POST', credentials)
-			const a = JSON.stringify(res)
-			//console.log(a);
-			const response = a.split(",")[0].split(":")[1]
-			var token = "";
-			var ans = "";
-
-			if (response == "true"){
-				token = a.split(",")[2].split(":")[1]		
-				//console.log(token)
-				ans = { message: 'Admin autenticado.',token: token}
-			}
-			
-			var othans = {message: 'Usuario  no autenticado.',token: ""}
-			if(res){
-				if(response === "false")return othans
-				else return ans
-			}else return othans
+			return ans
 		},
 		createUserld: (_, { user }) =>
 			generalRequest(`${URLAd}`, 'POST', user),
