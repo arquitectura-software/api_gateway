@@ -7,9 +7,6 @@ type correct{
     message: String!
     token: String!
 }
-type only{
-    message: String!
-}
 input UserInput2 {
     uname: String!
     surname: String!
@@ -19,7 +16,6 @@ input UserInput2 {
 input Token{
     token: String
 }
-
 input LoginInput {
     email: String!
     password: String!
@@ -34,5 +30,5 @@ export const ldMutations = `
     loginAdmin(credentials: LoginInput!): correct!
     createUserld(user: UserInput2!): response!
     createAdmin(user: UserInput2!): response!
-    validate(credentials: Token): only!
+    validate(credentials: Token): String!
 `;
