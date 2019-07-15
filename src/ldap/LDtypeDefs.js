@@ -4,8 +4,12 @@ type response {
     data: String!
 }
 type correct{
-    message: String!
+    success: Boolean!
+    data: String!
     token: String!
+}
+type only{
+    message: String!
 }
 input UserInput2 {
     uname: String!
@@ -30,5 +34,5 @@ export const ldMutations = `
     loginAdmin(credentials: LoginInput!): correct!
     createUserld(user: UserInput2!): response!
     createAdmin(user: UserInput2!): response!
-    validate(credentials: Token): String!
+    validate(credentials: Token): only!
 `;
