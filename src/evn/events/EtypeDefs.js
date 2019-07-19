@@ -1,6 +1,15 @@
 export const eventsTypeDef = `
-type Event {
+type Event{
     id: Int!
+    name: String!
+    location: String!
+    date: String!
+    capacity: Int!
+    audence: String!
+    description: String!
+    tipo: String!
+}
+type Event2{
     name: String!
     location: String!
     date: String!
@@ -25,7 +34,7 @@ export const eventsQueries = `
 `;
 
 export const eventsMutations = `
-    createEvent(event: EventInput!): Event!
+    createEvent(event: EventInput!): Event2!
     deleteEvent(id: Int!): Int!
     updateEvent(id: Int!, event: EventInput!): Event!
 `;

@@ -5,6 +5,11 @@ type Tienda {
     ubicacion: String!
     nombre: String!
 }
+type Tienda2 {
+    categoria: String!
+    ubicacion: String!
+    nombre: String!
+}
 input TiendaInput {
     categoria: String!
     ubicacion: String!
@@ -17,7 +22,7 @@ export const tiendasQueries = `
 `;
 
 export const tiendasMutations = `
-    createTienda(tienda: TiendaInput!): Tienda!
+    createTienda(tienda: TiendaInput!): Tienda2!
     deleteTienda(id: Int!): Int
     updateTienda(id: Int!, Tienda: TiendaInput!): Tienda!
 `;

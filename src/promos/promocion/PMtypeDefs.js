@@ -6,6 +6,12 @@ type Promocion {
     fecha_inicio: String!
     fecha_fin: String!
 }
+type Promocion2 {
+    id_tienda: Int!
+    descripcion: String!
+    fecha_inicio: String!
+    fecha_fin: String!
+}
 input PromocionInput {
     id_tienda: Int!
     descripcion: String!
