@@ -12,8 +12,7 @@ type only{
     message: String!
 }
 input UserInput2 {
-    uname: String!
-    surname: String!
+    names: String!
     email: String!
     passw: String!
 }
